@@ -16,13 +16,10 @@ enctype="multipart/form-data" name="form" method="POST" novalidate>
     <span>Start upload</span>
   </button>
 
-
-<!-- The global progress state -->
-<span class="fileupload-process"></span>
-
 <div class="col s6 fade" ng-class="{in: active()}">
     <div class="progress" file-upload-progress="progress()">
       <div class="determinate" ng-style="{width: num + '%'}"></div>
     </div>
 </div>
+
 </form>
