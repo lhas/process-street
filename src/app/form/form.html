@@ -1,5 +1,7 @@
-<form action="http://localhost:3010/" file-upload="options" 
+<form action="https://upload.wistia.com/" file-upload="options" 
 enctype="multipart/form-data" name="form" method="POST" novalidate>
+
+    <input type="hidden" name="api_password" value="441c57ae66999c3de58f4350bdf638cc97f297192dbbd74e139b769b0a14bf5c">
     <label>Username</label>
     <input type="text" name="username" value="luizhrqas">
 
@@ -7,7 +9,7 @@ enctype="multipart/form-data" name="form" method="POST" novalidate>
   <span class="btn btn-success fileinput-button">
     <i class="glyphicon glyphicon-plus"></i>
   <span>Add files...</span>
-  <input type="file" name="avatar" multiple="" ng-disabled="disabled">
+  <input type="file" name="file" multiple="" ng-disabled="disabled">
   </span>
 
   <!-- Start Upload Button -->

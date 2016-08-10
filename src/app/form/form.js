@@ -8,14 +8,19 @@
       controller: FormController
     });
 
-    FormController.$inject = ['$scope'];
-    function FormController($scope) {
-      $scope.options = {
+    FormController.$inject = [];
+    function FormController() {
+      var vm = this;
+      var options = {
           maxFileSize: 5000000,
           type: "POST",
-          url:'http://localhost:3010/',
-          acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i
+          url:'https://upload.wistia.com/',
+          done: function (e, data) {
+            // $("#player").addClass("wistia_async_" + data.result.hashed_id);
+          }
       };
+
+      this.options = options;
     }
 
 })();

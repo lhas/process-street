@@ -6,7 +6,8 @@
     "angular": "^1.5.0",
     "angular-ui-router": "^0.3.1",
     "angular-materialize": "^0.1.9",
-    "blueimp-file-upload": "^9.12.5"
+    "blueimp-file-upload": "^9.12.5",
+    "angular-wistia": "*"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0"
@@ -17,6 +18,14 @@
         "js/jquery.fileupload.js",
         "js/jquery.fileupload-angular.js"
       ]
+    },
+    "angular-wistia": {
+      "main": [
+        "dist/angular-wistia.js"
+      ],
+      "dependencies": {
+        "angular-resource": "~1"
+      }
     }
   }
 }
