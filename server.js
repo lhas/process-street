@@ -1,8 +1,11 @@
 var express = require('express')
 var multer  = require('multer')
+var cors = require('cors')
 var upload = multer({ dest: './uploads/' })
 
 var app = express()
+
+app.use(cors());
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
