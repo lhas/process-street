@@ -16,11 +16,13 @@
           type: "POST",
           url:'https://upload.wistia.com/',
           done: function (e, data) {
-            // $("#player").addClass("wistia_async_" + data.result.hashed_id);
+            vm.medias.push(data.result);
           }
       };
+      var medias = [];
 
-      this.options = options;
+      vm.options = options;
+      vm.medias = medias;
     }
 
 })();

@@ -1,27 +1,28 @@
-<form action="https://upload.wistia.com/" file-upload="options" 
+<form action="https://upload.wistia.com/" file-upload="$ctrl.options" 
 enctype="multipart/form-data" name="form" method="POST" novalidate>
 
     <input type="hidden" name="api_password" value="441c57ae66999c3de58f4350bdf638cc97f297192dbbd74e139b769b0a14bf5c">
-    <label>Username</label>
-    <input type="text" name="username" value="luizhrqas">
 
 <!-- Add Files Button -->
-  <span class="btn btn-success fileinput-button">
-    <i class="glyphicon glyphicon-plus"></i>
-  <span>Add files...</span>
+  <span class="btn blue fileinput-button">
+    <i class="material-icons">add</i>
+  <span>Select Video</span>
   <input type="file" name="file" multiple="" ng-disabled="disabled">
   </span>
 
   <!-- Start Upload Button -->
-  <button type="button" class="btn btn-primary start" ng-click="submit()">
-    <i class="glyphicon glyphicon-upload"></i>
-    <span>Start upload</span>
+  <button type="button" class="btn green" ng-click="submit()">
+    <i class="material-icons">play_arrow</i>
+    <span>Start</span>
   </button>
 
 <div class="col s6 fade" ng-class="{in: active()}">
     <div class="progress" file-upload-progress="progress()">
       <div class="determinate" ng-style="{width: num + '%'}"></div>
     </div>
+</div>
+
+  <div wistia-player class="ps-player" src-hashed-id="media.hashed_id" ng-repeat="media in $ctrl.medias">
 </div>
 
 </form>

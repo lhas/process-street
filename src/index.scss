@@ -1,3 +1,37 @@
 body {
   background-color: lightgrey;
 }
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px !important;
+  direction: ltr;
+  cursor: pointer;
+}
+.ps-player {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.progress {
+  height: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Fixes for IE < 8 */
+@media screen\9 {
+  .fileinput-button input {
+    filter: alpha(opacity=0);
+    font-size: 100%;
+    height: 100%;
+  }
+}
